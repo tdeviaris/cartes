@@ -8,9 +8,10 @@ Ce dépôt ne contient que des images : aucun code, aucune page.
 
 ## Contenu
 
-| Dossier      | Carte                                          | Dimensions        | Niveaux | Tuiles |
-|--------------|------------------------------------------------|-------------------|---------|--------|
-| `freycinet/` | Carte générale de la Nouvelle Hollande (1808–1811) | 20 135 × 13 078 px | 16      | 5 515  |
+| Dossier      | Carte                                              | Dimensions         | Niveaux | Tuiles |
+|--------------|----------------------------------------------------|--------------------|---------|--------|
+| `freycinet/` | Carte générale de la Nouvelle Hollande (1808–1811)  | 20 135 × 13 078 px | 16      | 5 515  |
+| `flinders/`  | General Chart of Terra Australis or Australia (1814) | 23 305 × 17 002 px | 16      | 8 279  |
 
 ## Convention
 
