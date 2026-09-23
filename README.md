@@ -12,6 +12,7 @@ Ce dépôt ne contient que des images : aucun code, aucune page.
 |--------------|----------------------------------------------------|--------------------|---------|--------|
 | `freycinet/` | Carte générale de la Nouvelle Hollande (1808–1811)  | 20 135 × 13 078 px | 16      | 5 515  |
 | `flinders/`  | General Chart of Terra Australis or Australia (1814) | 23 305 × 17 002 px | 16      | 8 279  |
+| `beautemps/` | Carte générale de la Nouvelle Hollande et des archipels du Grand Océan (1807) | 11 686 × 8 146 px | 15 | 1 977 |
 
 ## Fonds géoréférencés
 
@@ -22,12 +23,17 @@ Leaflet, QGIS ou MapLibre. Elles alimentent le sélecteur de fond de `map.html`.
 | Dossier            | Zooms | Tuiles | Calage                                                        |
 |--------------------|-------|--------|---------------------------------------------------------------|
 | `fonds/freycinet/` | 3 à 9 | 8 760  | quadrillage gravé, rectifié par surfaces de Coons ; contrôle sur le tropique du Capricorne à 0,2′ |
+| `fonds/beautemps/` | 3 à 8 | 4 810  | quadrillage de 10° ; pliure de reliure corrigée (jusqu'à 59 km) ; tropique à 4′, route des frégates gravée conforme aux tables de Rossel |
 
 Au-delà du zoom 9, la couche est agrandie (`maxNativeZoom: 9`). Les longitudes de Freycinet
 sont comptées depuis Paris : on ajoute 2°20′14″ pour passer à Greenwich, d'où les bornes
 `[[-45, 97.34], [-5, 167.34]]`. La méthode et les contrôles sont détaillés dans le
 `LISEZMOI.md` de `Cartes anciennes/fond_leaflet_freycinet/`, qui conserve aussi les scripts
 de calage.
+
+La carte de Beautemps-Beaupré franchit l'antiméridien (Nouvelle-Zélande, Tonga) : ses tuiles
+sont repliées (x modulo 2^z) et la couche se déclare **sans option `bounds`**, qui la couperait
+à 180°. Voir `Cartes anciennes/fond_leaflet_beautemps/LISEZMOI.md`.
 
 ## Convention
 
@@ -50,6 +56,7 @@ générées : un seul envoi suffit.
 
 ## Sources et licence
 
-Les numérisations proviennent de la [David Rumsey Map Collection](https://www.davidrumsey.com/)
-et sont diffusées sous licence **CC BY-NC-SA 3.0** : usage non commercial, avec mention de la
-source. Chaque carte cite la sienne dans le cartel de la visionneuse.
+Freycinet et Flinders proviennent de la [David Rumsey Map Collection](https://www.davidrumsey.com/),
+sous licence **CC BY-NC-SA 3.0** : usage non commercial, avec mention de la source.
+Beautemps-Beaupré provient de la [National Library of Australia](https://nla.gov.au/nla.obj-230810237/view)
+(MAP Ra 82). Chaque carte cite sa source dans le cartel de la visionneuse.
