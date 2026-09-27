@@ -24,7 +24,7 @@ Leaflet, QGIS ou MapLibre. Elles alimentent la colonne « Carte » du panneau de
 |--------------------|-------|--------|---------------------------------------------------------------|
 | `fonds/freycinet/` | 3 à 9 | 8 760  | quadrillage gravé, rectifié par surfaces de Coons ; contrôle sur le tropique du Capricorne à 0,2′ |
 | `fonds/beautemps/` | 3 à 8 | 4 810  | quadrillage de 10° ; pliure de reliure corrigée (jusqu'à 59 km) ; tropique à 4′, route des frégates gravée conforme aux tables de Rossel ; correction locale sur la Tasmanie (79 tuiles) |
-| `fonds/beautemps-canal/` | 9 à 13 | 890 | carte particulière du canal d'Entrecasteaux (pl. 4) : bordure graduée à la minute, puis recalage affine sur les fiches du site (0,7 km en médiane) |
+| `fonds/beautemps-canal/` | 8 à 13 | 894 | carte particulière du canal d'Entrecasteaux (pl. 4) : bordure graduée à la minute, puis recalage affine sur les fiches du site (0,7 km en médiane) |
 | `fonds/flinders/`  | 3 à 9 | 7 468  | quadrillage de 5°, longitudes de Greenwich ; 135° en double filet ; déformation du papier corrigée (jusqu'à 11,5 km) |
 
 Au-delà du zoom 9, la couche est agrandie (`maxNativeZoom: 9`). Les longitudes de Freycinet
@@ -39,9 +39,9 @@ sont repliées (x modulo 2^z) et la couche se déclare **sans option `bounds`**,
 à 180°. Voir `Cartes anciennes/fond_leaflet_beautemps/LISEZMOI.md`.
 
 **Cartes détaillées.** Une carte particulière prend le relais de la carte générale à partir du
-zoom 10, sur la zone qu'elle couvre. Contrairement aux cartes générales, elle est recalée sur la
+zoom 8, sur la zone qu'elle couvre. Contrairement aux cartes générales, elle est recalée sur la
 géographie moderne, et la carte générale reçoit une correction locale pour que la bascule se fasse
-sans saut. Premier cas : `fonds/beautemps-canal/` (`minZoom: 10, maxNativeZoom: 13`, bornes
+sans saut. Premier cas : `fonds/beautemps-canal/` (`minZoom: 8, maxNativeZoom: 13`, bornes
 `[[-43.80, 146.70], [-42.55, 147.85]]`), l'intérieur non levé étant transparent. La méthode est
 décrite dans `Cartes anciennes/fond_leaflet_beautemps/canal/LISEZMOI.md` et
 `Cartes anciennes/fond_leaflet_beautemps/tasmanie/LISEZMOI.md`.
