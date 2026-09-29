@@ -30,21 +30,21 @@ Leaflet, QGIS ou MapLibre. Elles alimentent la colonne « Carte » du panneau de
 Au-delà du zoom 9, la couche est agrandie (`maxNativeZoom: 9`). Les longitudes de Freycinet
 sont comptées depuis Paris : on ajoute 2°20′14″ pour passer à Greenwich, d'où les bornes
 `[[-45, 97.34], [-5, 167.34]]`. Celles de Flinders le sont déjà depuis Greenwich : bornes
-`[[-44.5, 102.5], [-6.5, 165.5]]`, voir `Cartes anciennes/fond_leaflet_flinders/LISEZMOI.md`. La méthode et les contrôles sont détaillés dans le
-`LISEZMOI.md` de `Cartes anciennes/fond_leaflet_freycinet/`, qui conserve aussi les scripts
+`[[-44.5, 102.5], [-6.5, 165.5]]`, voir `02_Cartes/fond_leaflet_flinders/LISEZMOI.md`. La méthode et les contrôles sont détaillés dans le
+`LISEZMOI.md` de `02_Cartes/fond_leaflet_freycinet/`, qui conserve aussi les scripts
 de calage.
 
 La carte de Beautemps-Beaupré franchit l'antiméridien (Nouvelle-Zélande, Tonga) : ses tuiles
 sont repliées (x modulo 2^z) et la couche se déclare **sans option `bounds`**, qui la couperait
-à 180°. Voir `Cartes anciennes/fond_leaflet_beautemps/LISEZMOI.md`.
+à 180°. Voir `02_Cartes/fond_leaflet_beautemps/LISEZMOI.md`.
 
 **Cartes détaillées.** Une carte particulière prend le relais de la carte générale à partir du
 zoom 8, sur la zone qu'elle couvre. Contrairement aux cartes générales, elle est recalée sur la
 géographie moderne, et la carte générale reçoit une correction locale pour que la bascule se fasse
 sans saut. Premier cas : `fonds/beautemps-canal/` (`minZoom: 8, maxNativeZoom: 13`, bornes
 `[[-43.80, 146.70], [-42.55, 147.85]]`), l'intérieur non levé étant transparent. La méthode est
-décrite dans `Cartes anciennes/fond_leaflet_beautemps/canal/LISEZMOI.md` et
-`Cartes anciennes/fond_leaflet_beautemps/tasmanie/LISEZMOI.md`.
+décrite dans `02_Cartes/fond_leaflet_beautemps/canal/LISEZMOI.md` et
+`02_Cartes/fond_leaflet_beautemps/tasmanie/LISEZMOI.md`.
 
 ## Convention
 
@@ -59,7 +59,7 @@ les autres lecteurs Deep Zoom.
 
 ## Ajouter une carte
 
-    python3 tiler.py          # voir « Cartes anciennes/visionneuse_freycinet/tiler.py »
+    python3 tiler.py <image> <carte>   # voir « 02_Cartes/outils/tiler.py »
 
 puis déposer `<carte>.dzi` et `<carte>_files/` dans un nouveau dossier `<carte>/`, et déclarer
 la carte dans `CARTES` au début de `map-viewer.html`. Les tuiles ne changent jamais une fois
